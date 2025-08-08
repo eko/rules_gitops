@@ -265,6 +265,7 @@ func main() {
 					if err == nil && fi.Mode().IsRegular() {
 						exec.Mustex("", bin)
 					} else {
+						// Toto
 						log.Println("target", target, "is not a file, running as a command")
 						exec.Mustex("", *bazelCmd, "run", target)
 					}
