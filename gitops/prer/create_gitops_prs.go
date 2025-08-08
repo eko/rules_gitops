@@ -266,7 +266,7 @@ func main() {
 						exec.Mustex("", bin)
 					} else {
 						log.Println("target", target, "is not a file, running as a command")
-						exec.Mustex("", *bazelCmd, "run", target)
+						exec.Mustex("", *bazelCmd, "run", "--config=ci", target)
 					}
 				}
 			}()
